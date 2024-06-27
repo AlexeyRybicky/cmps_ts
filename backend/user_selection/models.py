@@ -46,6 +46,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
 
-    # pylint: disable=E1101
+    # pylint: disable=E0307
     def __str__(self):
         return self.username
