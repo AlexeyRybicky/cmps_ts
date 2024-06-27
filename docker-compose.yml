@@ -24,7 +24,6 @@ services:
     volumes:
       - ./backend:/usr/src/app
 
-
   db:
     image: postgres:14.1-alpine
     restart: always
