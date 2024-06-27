@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 ]
 
 OUR_APPS = [
-    'user.apps.UserConfig',
+    'user_selection.apps.UserSelectionConfig',
 ]
 
 LIBRARIES = [
@@ -140,7 +140,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# Настройки Redis
 REDIS_HOST = os.getenv('REDIS_HOST')
 
 CACHES = {
