@@ -26,4 +26,4 @@ docker exec -it cmps_ts-app-1 /bin/bash
     python manage.py create_users
     ```
 6. Для дальнейшей работы с созданными пользователями можно перейти в админ панель по адресу http://localhost:8000/admin/
-7. Для проверки получения пользователя по id можно воспользоваться swagger по адресу http://localhost:8000/swagger/
+7. Для проверки получения пользователя по id можно воспользоваться swagger по адресу http://localhost:8000/swagger/ или http://localhost:8000/api/users/{id_пользователя}
