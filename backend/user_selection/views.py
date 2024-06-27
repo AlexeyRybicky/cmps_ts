@@ -12,12 +12,10 @@ class UserDetailView(APIView):
 
     Атрибуты:
         pk: Целочисленный идентификатор пользователя.
-
-    Методы:
-        get: Получает информацию о пользователе с заданным идентификатором.
     """
 
     def get(self, request, pk):
+        """Получает информацию о пользователе с заданным идентификатором."""
         user = User.objects.get(pk=pk)
         serializer = UserSerializer(user)
         return Response(serializer.data)

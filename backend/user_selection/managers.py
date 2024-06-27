@@ -1,12 +1,13 @@
 """
-В модуле содержится класс UserManager, представляет менеджер пользователей Django для создания обычных пользователей
-и суперпользователей.
+В модуле содержится класс UserManager, представляет менеджер пользователей Django
+для создания обычных пользователей и суперпользователей.
 """
 
 from django.contrib.auth.base_user import BaseUserManager
 
 
 class UserManager(BaseUserManager):
+    """Класс создания пользователей"""
     def create_user(self, username, email, password=None):
         """Создает обычного пользователя"""
         if not username:

@@ -3,6 +3,7 @@
 from django.urls import path
 from .views import UserDetailView
 
+# pylint: disable=C0103
 app_name = 'user_selection'
 
 urlpatterns = [

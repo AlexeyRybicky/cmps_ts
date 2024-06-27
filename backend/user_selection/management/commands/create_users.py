@@ -8,7 +8,10 @@ from user_selection.models import User
 
 
 class Command(BaseCommand):
-    """Создает пользователей с уникальными именами, ролями и аватарами на основе доступных значений."""
+    """
+    Создает пользователей с уникальными именами,
+    ролями и аватарами на основе доступных значений.
+    """
     def handle(self, *args, **options):
         roles = User.Role.choices
         avatars = ['user.png', 'manager.png', 'crm_admin.png']

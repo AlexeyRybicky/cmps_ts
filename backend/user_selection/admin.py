@@ -7,6 +7,7 @@ from user_selection.models import User
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
+    """Класс представляет административную панелья для управления пользователями"""
     list_display = (
         'id',
         'username',

@@ -15,6 +15,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects: models.Manager = UserManager()
 
     class Role(models.TextChoices):
+        """Класс для выбора роли"""
         USER = "user", _("Пользователь")
         MANAGER = "manager", _("Менеджер")
         CRM_ADMIN = "crm_admin", _("CRM-администратор")
@@ -45,5 +46,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
 
+    # pylint: disable=E1101
     def __str__(self):
         return self.username
